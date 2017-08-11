@@ -98,11 +98,53 @@ namespace Notepad
 
         private void liczbaZnakówToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           /* if (liczbaZnakówToolStripMenuItem.Checked = false)
+
+
+
+
+            // do udoskonalenia
+        }
+
+        private void liczbaznakow_Click(object sender, EventArgs e)
+        {
+            liczbaznakow.Visible = false;
+        }
+
+        private void liczbaZnakówToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            if (liczbaZnakówToolStripMenuItem.Checked = false)
                 liczbaznakow.Visible = false;
-            else
-                liczbaznakow.Visible = true;  */
-                // do udoskonalenia
+        }
+
+        private void pokażToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            liczbaznakow.Visible = true;
+        }
+
+        private void schowajToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            liczbaznakow.Visible = false;
+        }
+
+        private void zawijajTekstToolStripMenuItem_CheckStateChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void zawijajTekstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.WordWrap = true;
+        }
+
+        private void bToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.WordWrap = false;
         }
     }
 }

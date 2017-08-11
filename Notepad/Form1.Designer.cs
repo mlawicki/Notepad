@@ -41,13 +41,18 @@
             this.wklejToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.widokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.liczbaZnakówToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pokażToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.schowajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zawijajTekstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolorCzcionkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolorTłaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liczbaznakow = new System.Windows.Forms.Label();
-            this.widokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.liczbaZnakówToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,6 +166,56 @@
             this.redoToolStripMenuItem.Text = "Redo->";
             this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             // 
+            // widokToolStripMenuItem
+            // 
+            this.widokToolStripMenuItem.Checked = true;
+            this.widokToolStripMenuItem.CheckOnClick = true;
+            this.widokToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.widokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.liczbaZnakówToolStripMenuItem,
+            this.zawijajTekstToolStripMenuItem});
+            this.widokToolStripMenuItem.Name = "widokToolStripMenuItem";
+            this.widokToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.widokToolStripMenuItem.Text = "Widok";
+            // 
+            // liczbaZnakówToolStripMenuItem
+            // 
+            this.liczbaZnakówToolStripMenuItem.CheckOnClick = true;
+            this.liczbaZnakówToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pokażToolStripMenuItem,
+            this.schowajToolStripMenuItem});
+            this.liczbaZnakówToolStripMenuItem.Name = "liczbaZnakówToolStripMenuItem";
+            this.liczbaZnakówToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.liczbaZnakówToolStripMenuItem.Text = "Liczba znaków";
+            this.liczbaZnakówToolStripMenuItem.CheckedChanged += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_CheckedChanged);
+            this.liczbaZnakówToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_CheckedChanged);
+            this.liczbaZnakówToolStripMenuItem.Click += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_Click);
+            // 
+            // pokażToolStripMenuItem
+            // 
+            this.pokażToolStripMenuItem.Name = "pokażToolStripMenuItem";
+            this.pokażToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.pokażToolStripMenuItem.Text = "pokaż";
+            this.pokażToolStripMenuItem.Click += new System.EventHandler(this.pokażToolStripMenuItem_Click);
+            // 
+            // schowajToolStripMenuItem
+            // 
+            this.schowajToolStripMenuItem.Name = "schowajToolStripMenuItem";
+            this.schowajToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.schowajToolStripMenuItem.Text = "schowaj";
+            this.schowajToolStripMenuItem.Click += new System.EventHandler(this.schowajToolStripMenuItem_Click);
+            // 
+            // zawijajTekstToolStripMenuItem
+            // 
+            this.zawijajTekstToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aToolStripMenuItem,
+            this.bToolStripMenuItem});
+            this.zawijajTekstToolStripMenuItem.Name = "zawijajTekstToolStripMenuItem";
+            this.zawijajTekstToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zawijajTekstToolStripMenuItem.Text = "Zawijaj tekst";
+            this.zawijajTekstToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.zawijajTekstToolStripMenuItem_CheckStateChanged);
+            this.zawijajTekstToolStripMenuItem.Click += new System.EventHandler(this.zawijajTekstToolStripMenuItem_Click);
+            // 
             // czcionkaToolStripMenuItem
             // 
             this.czcionkaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -202,27 +257,21 @@
             this.liczbaznakow.Size = new System.Drawing.Size(15, 15);
             this.liczbaznakow.TabIndex = 2;
             this.liczbaznakow.Text = "0";
+            this.liczbaznakow.Click += new System.EventHandler(this.liczbaznakow_Click);
             // 
-            // widokToolStripMenuItem
+            // aToolStripMenuItem
             // 
-            this.widokToolStripMenuItem.Checked = true;
-            this.widokToolStripMenuItem.CheckOnClick = true;
-            this.widokToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.widokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.liczbaZnakówToolStripMenuItem});
-            this.widokToolStripMenuItem.Name = "widokToolStripMenuItem";
-            this.widokToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.widokToolStripMenuItem.Text = "Widok";
+            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aToolStripMenuItem.Text = "zawijaj";
+            this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
             // 
-            // liczbaZnakówToolStripMenuItem
+            // bToolStripMenuItem
             // 
-            this.liczbaZnakówToolStripMenuItem.Checked = true;
-            this.liczbaZnakówToolStripMenuItem.CheckOnClick = true;
-            this.liczbaZnakówToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.liczbaZnakówToolStripMenuItem.Name = "liczbaZnakówToolStripMenuItem";
-            this.liczbaZnakówToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.liczbaZnakówToolStripMenuItem.Text = "Liczba znaków";
-            this.liczbaZnakówToolStripMenuItem.Click += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_Click);
+            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bToolStripMenuItem.Text = "nie zawijaj";
+            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -265,6 +314,11 @@
         private System.Windows.Forms.Label liczbaznakow;
         private System.Windows.Forms.ToolStripMenuItem widokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem liczbaZnakówToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pokażToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem schowajToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zawijajTekstToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
     }
 }
 
