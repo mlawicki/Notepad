@@ -25,6 +25,9 @@ namespace Notepad
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             liczbaznakow.Text = richTextBox1.Text.Length.ToString();
+         /*   var lineCount = richTextBox1.Lines.Count();
+            liczbalinii.Text = lineCount.ToString();     */    //do dodania analogiczny Label liczbalinii
+
         }
 
         private void nowyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,6 +148,26 @@ namespace Notepad
         private void bToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.WordWrap = false;
+        }
+
+        private void wstawDatęToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text += DateTime.Now.ToString();
+        }
+
+        private void zaznaczWszystkoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+        }
+
+        private void plikToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

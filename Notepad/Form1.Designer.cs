@@ -36,23 +36,25 @@
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wyjścieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.edycjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kopiujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wytnijToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wklejToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wstawDatęToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zaznaczWszystkoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.widokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liczbaZnakówToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pokażToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.schowajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zawijajTekstToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.czcionkaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolorCzcionkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolorTłaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liczbaznakow = new System.Windows.Forms.Label();
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,6 +92,7 @@
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
             this.plikToolStripMenuItem.Text = "Plik";
+            this.plikToolStripMenuItem.Click += new System.EventHandler(this.plikToolStripMenuItem_Click);
             // 
             // nowyToolStripMenuItem
             // 
@@ -121,50 +124,66 @@
             // edycjaToolStripMenuItem
             // 
             this.edycjaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.undoToolStripMenuItem,
+            this.redoToolStripMenuItem,
             this.kopiujToolStripMenuItem,
             this.wytnijToolStripMenuItem,
             this.wklejToolStripMenuItem,
-            this.undoToolStripMenuItem,
-            this.redoToolStripMenuItem});
+            this.wstawDatęToolStripMenuItem,
+            this.zaznaczWszystkoToolStripMenuItem});
             this.edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
             this.edycjaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.edycjaToolStripMenuItem.Text = "Edycja";
             this.edycjaToolStripMenuItem.Click += new System.EventHandler(this.edycjaToolStripMenuItem_Click);
             // 
-            // kopiujToolStripMenuItem
-            // 
-            this.kopiujToolStripMenuItem.Name = "kopiujToolStripMenuItem";
-            this.kopiujToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.kopiujToolStripMenuItem.Text = "Kopiuj";
-            this.kopiujToolStripMenuItem.Click += new System.EventHandler(this.kopiujToolStripMenuItem_Click);
-            // 
-            // wytnijToolStripMenuItem
-            // 
-            this.wytnijToolStripMenuItem.Name = "wytnijToolStripMenuItem";
-            this.wytnijToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.wytnijToolStripMenuItem.Text = "Wytnij";
-            this.wytnijToolStripMenuItem.Click += new System.EventHandler(this.wytnijToolStripMenuItem_Click);
-            // 
-            // wklejToolStripMenuItem
-            // 
-            this.wklejToolStripMenuItem.Name = "wklejToolStripMenuItem";
-            this.wklejToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
-            this.wklejToolStripMenuItem.Text = "Wklej";
-            this.wklejToolStripMenuItem.Click += new System.EventHandler(this.wklejToolStripMenuItem_Click);
-            // 
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.undoToolStripMenuItem.Text = "<-Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // redoToolStripMenuItem
             // 
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.redoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.redoToolStripMenuItem.Text = "Redo->";
             this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
+            // 
+            // kopiujToolStripMenuItem
+            // 
+            this.kopiujToolStripMenuItem.Name = "kopiujToolStripMenuItem";
+            this.kopiujToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.kopiujToolStripMenuItem.Text = "Kopiuj";
+            this.kopiujToolStripMenuItem.Click += new System.EventHandler(this.kopiujToolStripMenuItem_Click);
+            // 
+            // wytnijToolStripMenuItem
+            // 
+            this.wytnijToolStripMenuItem.Name = "wytnijToolStripMenuItem";
+            this.wytnijToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.wytnijToolStripMenuItem.Text = "Wytnij";
+            this.wytnijToolStripMenuItem.Click += new System.EventHandler(this.wytnijToolStripMenuItem_Click);
+            // 
+            // wklejToolStripMenuItem
+            // 
+            this.wklejToolStripMenuItem.Name = "wklejToolStripMenuItem";
+            this.wklejToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.wklejToolStripMenuItem.Text = "Wklej";
+            this.wklejToolStripMenuItem.Click += new System.EventHandler(this.wklejToolStripMenuItem_Click);
+            // 
+            // wstawDatęToolStripMenuItem
+            // 
+            this.wstawDatęToolStripMenuItem.Name = "wstawDatęToolStripMenuItem";
+            this.wstawDatęToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.wstawDatęToolStripMenuItem.Text = "Wstaw datę";
+            this.wstawDatęToolStripMenuItem.Click += new System.EventHandler(this.wstawDatęToolStripMenuItem_Click);
+            // 
+            // zaznaczWszystkoToolStripMenuItem
+            // 
+            this.zaznaczWszystkoToolStripMenuItem.Name = "zaznaczWszystkoToolStripMenuItem";
+            this.zaznaczWszystkoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.zaznaczWszystkoToolStripMenuItem.Text = "Zaznacz wszystko";
+            this.zaznaczWszystkoToolStripMenuItem.Click += new System.EventHandler(this.zaznaczWszystkoToolStripMenuItem_Click);
             // 
             // widokToolStripMenuItem
             // 
@@ -185,7 +204,7 @@
             this.pokażToolStripMenuItem,
             this.schowajToolStripMenuItem});
             this.liczbaZnakówToolStripMenuItem.Name = "liczbaZnakówToolStripMenuItem";
-            this.liczbaZnakówToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.liczbaZnakówToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.liczbaZnakówToolStripMenuItem.Text = "Liczba znaków";
             this.liczbaZnakówToolStripMenuItem.CheckedChanged += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_CheckedChanged);
             this.liczbaZnakówToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_CheckedChanged);
@@ -211,10 +230,24 @@
             this.aToolStripMenuItem,
             this.bToolStripMenuItem});
             this.zawijajTekstToolStripMenuItem.Name = "zawijajTekstToolStripMenuItem";
-            this.zawijajTekstToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zawijajTekstToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.zawijajTekstToolStripMenuItem.Text = "Zawijaj tekst";
             this.zawijajTekstToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.zawijajTekstToolStripMenuItem_CheckStateChanged);
             this.zawijajTekstToolStripMenuItem.Click += new System.EventHandler(this.zawijajTekstToolStripMenuItem_Click);
+            // 
+            // aToolStripMenuItem
+            // 
+            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.aToolStripMenuItem.Text = "zawijaj";
+            this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
+            // 
+            // bToolStripMenuItem
+            // 
+            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.bToolStripMenuItem.Text = "nie zawijaj";
+            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // czcionkaToolStripMenuItem
             // 
@@ -258,20 +291,6 @@
             this.liczbaznakow.TabIndex = 2;
             this.liczbaznakow.Text = "0";
             this.liczbaznakow.Click += new System.EventHandler(this.liczbaznakow_Click);
-            // 
-            // aToolStripMenuItem
-            // 
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aToolStripMenuItem.Text = "zawijaj";
-            this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
-            // 
-            // bToolStripMenuItem
-            // 
-            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.bToolStripMenuItem.Text = "nie zawijaj";
-            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -319,6 +338,8 @@
         private System.Windows.Forms.ToolStripMenuItem zawijajTekstToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wstawDatęToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zaznaczWszystkoToolStripMenuItem;
     }
 }
 
