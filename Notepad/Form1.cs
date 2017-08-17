@@ -15,6 +15,8 @@ namespace Notepad
         public Form1()
         {
             InitializeComponent();
+            int start = 0;
+            int indexOfSearchText = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,8 +27,8 @@ namespace Notepad
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
             liczbaznakow.Text = richTextBox1.Text.Length.ToString();
-         /*   var lineCount = richTextBox1.Lines.Count();
-            liczbalinii.Text = lineCount.ToString();     */    //do dodania analogiczny Label liczbalinii
+           var lineCount = richTextBox1.Lines.Count();
+            liczbalinii.Text = lineCount.ToString();         //do dodania analogiczny Label liczbalinii
 
         }
 
@@ -95,7 +97,7 @@ namespace Notepad
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("by mlawicki \n github.com/mlawicki");
+            System.Windows.Forms.MessageBox.Show("Notepad v.0.3.1. \n by mlawicki \n github.com/mlawicki");
 
         }
 
@@ -166,6 +168,37 @@ namespace Notepad
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void liczbalinii_Click(object sender, EventArgs e)
+        {
+            liczbalinii.Visible = false;
+        }
+
+        private void pokażToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            liczbalinii.Visible = true;
+
+        }
+
+        private void schowajToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            liczbalinii.Visible = false;
+        }
+
+        private void znajdźToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+ 
+        }
+
+        private void liczbaLiniiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
