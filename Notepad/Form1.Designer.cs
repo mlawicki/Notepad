@@ -44,6 +44,8 @@
             this.wstawDatęToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zaznaczWszystkoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.znajdźToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.znajdźNastępnyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zamienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.widokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.liczbaZnakówToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pokażLzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,7 +126,7 @@
             // wyjścieToolStripMenuItem
             // 
             this.wyjścieToolStripMenuItem.Name = "wyjścieToolStripMenuItem";
-            this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
             this.wyjścieToolStripMenuItem.Text = "Wyjście";
             this.wyjścieToolStripMenuItem.Click += new System.EventHandler(this.wyjścieToolStripMenuItem_Click);
             // 
@@ -138,7 +140,9 @@
             this.wklejToolStripMenuItem,
             this.wstawDatęToolStripMenuItem,
             this.zaznaczWszystkoToolStripMenuItem,
-            this.znajdźToolStripMenuItem});
+            this.znajdźToolStripMenuItem,
+            this.znajdźNastępnyToolStripMenuItem,
+            this.zamienToolStripMenuItem});
             this.edycjaToolStripMenuItem.Name = "edycjaToolStripMenuItem";
             this.edycjaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.edycjaToolStripMenuItem.Text = "Edycja";
@@ -195,11 +199,24 @@
             // 
             // znajdźToolStripMenuItem
             // 
-            this.znajdźToolStripMenuItem.Enabled = false;
             this.znajdźToolStripMenuItem.Name = "znajdźToolStripMenuItem";
             this.znajdźToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.znajdźToolStripMenuItem.Text = "Znajdź";
             this.znajdźToolStripMenuItem.Click += new System.EventHandler(this.znajdźToolStripMenuItem_Click);
+            // 
+            // znajdźNastępnyToolStripMenuItem
+            // 
+            this.znajdźNastępnyToolStripMenuItem.Name = "znajdźNastępnyToolStripMenuItem";
+            this.znajdźNastępnyToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.znajdźNastępnyToolStripMenuItem.Text = "Znajdź następny";
+            this.znajdźNastępnyToolStripMenuItem.Click += new System.EventHandler(this.znajdźNastępnyToolStripMenuItem_Click);
+            // 
+            // zamienToolStripMenuItem
+            // 
+            this.zamienToolStripMenuItem.Name = "zamienToolStripMenuItem";
+            this.zamienToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.zamienToolStripMenuItem.Text = "Zamien";
+            this.zamienToolStripMenuItem.Click += new System.EventHandler(this.zamienToolStripMenuItem_Click);
             // 
             // widokToolStripMenuItem
             // 
@@ -221,7 +238,7 @@
             this.pokażLzToolStripMenuItem,
             this.schowajLzToolStripMenuItem});
             this.liczbaZnakówToolStripMenuItem.Name = "liczbaZnakówToolStripMenuItem";
-            this.liczbaZnakówToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.liczbaZnakówToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.liczbaZnakówToolStripMenuItem.Text = "Liczba znaków";
             this.liczbaZnakówToolStripMenuItem.CheckedChanged += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_CheckedChanged);
             this.liczbaZnakówToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.liczbaZnakówToolStripMenuItem_CheckedChanged);
@@ -247,7 +264,7 @@
             this.pokażLlToolStripMenuItem1,
             this.schowajLlToolStripMenuItem1});
             this.liczbaLiniiToolStripMenuItem.Name = "liczbaLiniiToolStripMenuItem";
-            this.liczbaLiniiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.liczbaLiniiToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.liczbaLiniiToolStripMenuItem.Text = "Liczba linii";
             this.liczbaLiniiToolStripMenuItem.Click += new System.EventHandler(this.liczbaLiniiToolStripMenuItem_Click);
             // 
@@ -271,7 +288,7 @@
             this.aToolStripMenuItem,
             this.bToolStripMenuItem});
             this.zawijajTekstToolStripMenuItem.Name = "zawijajTekstToolStripMenuItem";
-            this.zawijajTekstToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zawijajTekstToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.zawijajTekstToolStripMenuItem.Text = "Zawijaj tekst";
             this.zawijajTekstToolStripMenuItem.CheckStateChanged += new System.EventHandler(this.zawijajTekstToolStripMenuItem_CheckStateChanged);
             this.zawijajTekstToolStripMenuItem.Click += new System.EventHandler(this.zawijajTekstToolStripMenuItem_Click);
@@ -302,14 +319,14 @@
             // kolorCzcionkiToolStripMenuItem
             // 
             this.kolorCzcionkiToolStripMenuItem.Name = "kolorCzcionkiToolStripMenuItem";
-            this.kolorCzcionkiToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kolorCzcionkiToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.kolorCzcionkiToolStripMenuItem.Text = "Kolor czcionki";
             this.kolorCzcionkiToolStripMenuItem.Click += new System.EventHandler(this.kolorCzcionkiToolStripMenuItem_Click);
             // 
             // kolorTłaToolStripMenuItem
             // 
             this.kolorTłaToolStripMenuItem.Name = "kolorTłaToolStripMenuItem";
-            this.kolorTłaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kolorTłaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.kolorTłaToolStripMenuItem.Text = "Kolor tła";
             this.kolorTłaToolStripMenuItem.Click += new System.EventHandler(this.kolorTłaToolStripMenuItem_Click);
             // 
@@ -401,6 +418,8 @@
         private System.Windows.Forms.ToolStripMenuItem pokażLlToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem schowajLlToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem znajdźToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem znajdźNastępnyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zamienToolStripMenuItem;
     }
 }
 

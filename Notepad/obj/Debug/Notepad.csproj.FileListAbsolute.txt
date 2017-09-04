@@ -16,3 +16,5 @@ C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.csprojR
 C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
 C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
 C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.Cache
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Znajdz.resources
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Zamien.resources

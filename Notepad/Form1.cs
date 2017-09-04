@@ -12,11 +12,15 @@ namespace Notepad
 {
     public partial class Form1 : Form
     {
+        public static string SzukanyTekst;
+        public static string ZmienionyTekst;
+        public static Boolean rozrozniajwielkoscliter;
+        int d;
+
         public Form1()
         {
             InitializeComponent();
-            int start = 0;
-            int indexOfSearchText = 0;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -97,7 +101,7 @@ namespace Notepad
 
         private void infoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.MessageBox.Show("Notepad v.0.3.1. \n by mlawicki \n github.com/mlawicki");
+            System.Windows.Forms.MessageBox.Show("Notepad v.0.4. \n by mlawicki \n github.com/mlawicki");
 
         }
 
@@ -107,7 +111,7 @@ namespace Notepad
 
 
 
-            // do udoskonalenia
+         
         }
 
         private void liczbaznakow_Click(object sender, EventArgs e)
@@ -192,9 +196,35 @@ namespace Notepad
 
         private void znajdźToolStripMenuItem_Click(object sender, EventArgs e)
         {
- 
+
+            Znajdz r = new Znajdz();
+            r.ShowDialog();
+
+            if (SzukanyTekst != "")
+            {
+
+                    d = richTextBox1.Find(SzukanyTekst);
+
+            }
+
+
+
         }
 
+        private void znajdźNastępnyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SzukanyTekst != "")
+            {
+                if (rozrozniajwielkoscliter == true)
+                {
+                    d = richTextBox1.Find(SzukanyTekst, d + 1, RichTextBoxFinds.MatchCase);
+                }
+                else
+                {
+                    d = richTextBox1.Find(SzukanyTekst, d + 1, RichTextBoxFinds.None);
+                }
+            }
+        }
         private void liczbaLiniiToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -213,6 +243,14 @@ namespace Notepad
                 Application.Exit();
 
             }
+        }
+
+        private void zamienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zamien r = new Zamien();
+            r.ShowDialog();
+            richTextBox1.Find(SzukanyTekst);
+            richTextBox1.SelectedText = ZmienionyTekst;
         }
     }
 }
