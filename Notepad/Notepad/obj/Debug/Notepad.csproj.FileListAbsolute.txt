@@ -1,0 +1,20 @@
+c:\csharp\Notepad\Notepad\bin\Debug\Notepad.exe.config
+C:\csharp\Notepad\Notepad\bin\Debug\Notepad.exe
+C:\csharp\Notepad\Notepad\bin\Debug\Notepad.pdb
+C:\csharp\Notepad\Notepad\obj\Debug\Notepad.csprojResolveAssemblyReference.cache
+C:\csharp\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
+C:\csharp\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+C:\csharp\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.Cache
+C:\csharp\Notepad\Notepad\obj\Debug\Notepad.exe
+C:\csharp\Notepad\Notepad\obj\Debug\Notepad.pdb
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\bin\Debug\Notepad.exe.config
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.exe
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.pdb
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\bin\Debug\Notepad.exe
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\bin\Debug\Notepad.pdb
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.csprojResolveAssemblyReference.cache
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Form1.resources
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.Cache
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Znajdz.resources
+C:\Users\DOBRI\Desktop\programy csharp\Notepad\Notepad\obj\Debug\Notepad.Zamien.resources

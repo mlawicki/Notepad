@@ -7,6 +7,3 @@
 0.4 03/09/2017
 - dodano funkcje "Znajdz" oraz "Znajdz nastepny"
 - dodano funkcje "Zamien"
-
-0.5 27/02/2018
--dokowanie etykiety liczb znaów oraz linii w pasku dolnym
